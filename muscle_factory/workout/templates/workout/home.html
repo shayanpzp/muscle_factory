@@ -1,0 +1,79 @@
+{% extends "workout/base.html" %}
+{% load static %}
+{% block title %}خانه{% endblock %}
+
+{% block content %}
+
+<div class="d-flex flex-column min-vh-100">
+
+  <section class="flex-grow-1 d-flex flex-column justify-content-center align-items-center text-center py-5">
+    <div class="w-100" style="max-width: 980px;">
+
+
+      <!-- =============== RESPONSIVE LOGO =============== -->
+      <div class="mb-4">
+        <img src="{% static 'workout/img/logo.png' %}"
+             alt="Muscle Factory Logo"
+             class="img-fluid shadow-lg"
+             style="
+                max-width: 220px;
+                width: 60%;
+                height:auto;
+                object-fit:contain;
+                border-radius: 18px;
+                border:2px solid rgba(255,255,255,0.1);
+             ">
+      </div>
+      <!-- =============================================== -->
+
+
+      <h1 class="display-5 fw-bold text-gold mb-3">Muscle Factory</h1>
+
+      <p class="lead text-ice-muted mb-4">
+        برنامه تمرینی اختصاصی، بر اساس قد، وزن و سطح فعالیت شما — سریع، دقیق و موبایل‌محور.
+      </p>
+
+      <a href="{% url 'workout:questionnaire' %}" class="btn btn-gold btn-lg mb-4">
+        دریافت برنامه
+      </a>
+
+
+      <!-- Features -->
+      <div class="row row-cols-1 row-cols-md-2 g-3 mt-4">
+
+        <div class="col">
+          <div class="card h-100 p-3 bg-card">
+            <div class="d-flex align-items-start gap-2">
+              <div class="icon-box rounded-2 d-flex align-items-center justify-content-center">🏋️‍♂️</div>
+              <div>
+                <h5 class="mb-1 text-gold">برنامه اختصاصی</h5>
+                <p class="mb-0 small text-ice-muted">
+                  برنامه دقیق بر اساس BMI، هدف و فعالیت روزانه شما.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 p-3 bg-card">
+            <div class="d-flex align-items-start gap-2">
+              <div class="icon-box rounded-2 d-flex align-items-center justify-content-center">⚡</div>
+              <div>
+                <h5 class="mb-1 text-gold">سریع و آسان</h5>
+                <p class="mb-0 small text-ice-muted">
+                  تنها با چند داده ساده، برنامه‌ی شما آماده می‌شود.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+{% endblock %}

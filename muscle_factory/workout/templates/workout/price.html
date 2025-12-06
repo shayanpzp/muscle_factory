@@ -1,0 +1,115 @@
+{% extends "workout/base.html" %}
+{% load humanize %}
+{% block title %}قیمت برنامه{% endblock %}
+
+{% block content %}
+<section class="row justify-content-center py-4">
+  <div class="col-12 col-md-8 col-lg-6">
+
+    <div class="card bg-card border-0 shadow-sm">
+      <div class="card-body">
+
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h4 class="mb-0 text-gold">قیمت برنامه — {{ workout }}</h4>
+          <small class="text-ice-muted">مرحله ۳ از ۳</small>
+        </div>
+
+        <!-- User Info -->
+        <div class="mt-2">
+          <p class="mb-1">
+            <strong class="text-ice">نام:</strong>
+            <span class="text-ice-muted">{{ user.first_name }} {{ user.last_name }}</span>
+          </p>
+
+          <p class="mb-1">
+            <strong class="text-ice">موبایل:</strong>
+            <span class="text-ice-muted">{{ user.mobile }}</span>
+          </p>
+
+          <p class="mb-1">
+            <strong class="text-ice">BMI:</strong>
+            <span class="text-ice-muted">{{ bmi_info.bmi }} — {{ bmi_info.status }}</span>
+          </p>
+        </div>
+
+        <!-- Beginner Plan -->
+        <div class="price-card mt-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="price-title">برنامه مقدماتی</div>
+              <div class="price-sub small">مناسب شروع — تمرکز بر اصول</div>
+            </div>
+            <div class="price-amount">{{ price_beginner|intcomma }} تومان</div>
+          </div>
+        </div>
+
+        <!-- Pro Plan -->
+        <div class="price-card mt-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <div class="price-title text-gold">برنامه حرفه‌ای</div>
+              <div class="price-sub small">تمرین تخصصی + تغذیه + پیگیری</div>
+            </div>
+            <div class="price-amount">{{ price_pro|intcomma }} تومان</div>
+          </div>
+        </div>
+
+        <!-- Payment Info -->
+        <div class="payment-box mt-4">
+          <h5 class="text-gold mb-3">اطلاعات پرداخت</h5>
+
+          <p class="mb-2 text-ice"><strong>شماره کارت:</strong>
+            <span class="text-ice-muted">6037-9915-1234-5678</span>
+          </p>
+
+          <p class="mb-2 text-ice"><strong>شماره حساب:</strong>
+            <span class="text-ice-muted">1234567890000</span>
+          </p>
+
+          <p class="mb-2 text-ice"><strong>شماره شبا:</strong>
+            <span class="text-ice-muted">IR12 3456 7890 1234 5678 9012 34</span>
+          </p>
+
+          <p class="mb-1 text-ice"><strong>به نام:</strong>
+            <span class="text-ice-muted">فرشید علیزاده</span>
+          </p>
+        </div>
+
+        <!-- Warning Box -->
+        <div class="text-center mt-4 mb-3">
+          <p style="color:#ff4d4d; font-weight:bold; line-height:1.8;">
+            لطفاً فیش واریزی خود را در تلگرام به شماره
+            <span style="color:white; font-weight:bold;">۰۹۳۶۳۱۴۹۱۳۱</span>
+            ارسال کنید.
+          </p>
+        </div>
+
+        <!-- PDF Download Button -->
+        <div class="text-center mt-2">
+          <a href="{% url 'workout:price_pdf' %}" class="btn btn-gold w-100">
+            دانلود نسخه PDF مشخصات شما
+          </a>
+        </div>
+
+        <!-- Support Phone -->
+        <div class="text-center mt-3">
+          <p class="text-ice-muted small">
+            در صورت بروز مشکل با شماره
+            <span class="text-gold fw-bold">۰۹۳۶۳۱۴۹۱۳۱</span>
+            ارتباط بگیرید.
+          </p>
+        </div>
+
+        <!-- Footer Buttons -->
+        <div class="d-flex justify-content-between mt-4">
+          <a href="{% url 'workout:choose_program' %}" class="btn btn-outline-light">تغییر ورزش</a>
+          <a href="{% url 'workout:home' %}" class="btn btn-link text-ice">بازگشت به خانه</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

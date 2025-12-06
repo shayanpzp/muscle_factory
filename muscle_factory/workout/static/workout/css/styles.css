@@ -1,0 +1,242 @@
+/* =========================================
+   RESET & BASE
+========================================= */
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #F0F4F8;
+    font-family: "Inter", "IRANSans", sans-serif;
+}
+
+a {
+    color: #d4af37;
+    text-decoration: none;
+}
+a:hover {
+    color: #e7c556;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+.navbar {
+    background: #111;
+    border-bottom: 1px solid #222;
+}
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+.hero-section {
+    padding: 100px 20px;
+    text-align: center;
+}
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #d4af37;
+    margin-bottom: 30px;
+}
+.hero-button {
+    background: #d4af37;
+    color: #000 !important;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+.hero-button:hover {
+    background: #b8922e;
+}
+
+/* =========================================
+   GLOBAL CARDS
+========================================= */
+.bg-card, .form-card, .option-card {
+    background: #1a1a1a !important;
+    border: 1px solid #222;
+    padding: 25px;
+    border-radius: 16px;
+    color: #F0F4F8;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.12);
+}
+.bg-card:hover, .option-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-4px);
+    transition: 0.25s ease;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+.btn-gold {
+    background: #d4af37 !important;
+    color: #000 !important;
+    border-radius: 10px;
+    padding: 12px 28px;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+.btn-gold:hover {
+    background: #b8922e !important;
+}
+
+.btn-outline-light {
+    border: 1px solid #444 !important;
+    color: #F0F4F8 !important;
+}
+.btn-outline-light:hover {
+    background: #222 !important;
+}
+
+/* =========================================
+   FORMS
+========================================= */
+label, .form-label {
+    color: #F0F4F8;
+    font-weight: 500;
+}
+
+.form-text, .text-ice-muted {
+    color: #cfd8e3 !important;
+    font-size: 0.85rem;
+}
+
+.form-control, .form-select, textarea {
+    background: #222 !important;
+    border: 1px solid #333;
+    color: #F0F4F8;
+    border-radius: 10px;
+    padding: .55rem .8rem;
+}
+.form-control::placeholder,
+textarea::placeholder {
+    color: #9ea8b3;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+    border-color: #d4af37 !important;
+    box-shadow: 0 0 0 0.25rem rgba(212,175,55,0.23) !important;
+}
+
+/* رادیوها و چک‌باکس‌ها */
+input[type=radio],
+input[type=checkbox] {
+    accent-color: #d4af37;
+}
+
+/* =========================================
+   SPECIAL BOXES
+========================================= */
+.border.rounded.p-2 {
+    background: #222 !important;
+    color: #F0F4F8 !important;
+}
+
+/* ERROR TEXT */
+.text-danger {
+    color: #ff6b6b !important;
+}
+
+/* =========================================
+   RESULT BOX
+========================================= */
+.result-box {
+    background: #1a1a1a !important;
+    border: 1px solid #222;
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 0 18px rgba(212,175,55,0.12);
+}
+
+/* =========================================
+   PRICE CARDS
+========================================= */
+.price-card {
+    background: #1a1a1a !important;
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid #333;
+}
+.price-title {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #fff;
+}
+.price-sub {
+    color: #cfd8e3;
+    font-size: 0.85rem;
+}
+.price-amount {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #d4af37 !important;
+}
+
+/* =========================================
+   PAYMENT BOX
+========================================= */
+.payment-box {
+    background: #1a1a1a;
+    border-radius: 14px;
+    padding: 20px;
+    border: 1px solid #333;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    background: #111;
+    border-top: 1px solid #222;
+    text-align: center;
+    padding: 18px;
+    color: #F0F4F8;
+}
+
+/* =========================================
+   LIST GROUP
+========================================= */
+.list-group-item {
+    background: #1a1a1a !important;
+    color: #F0F4F8 !important;
+    border: 1px solid #222 !important;
+}
+
+/* =========================================
+   ICON BOXES
+========================================= */
+.icon-box {
+    width: 48px;
+    height: 48px;
+    background: rgba(212,175,55,0.1);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25rem;
+    color: #d4af37;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 1rem; }
+    .hero-section { padding: 60px 16px; }
+
+    .bg-card, .option-card { padding: 18px; }
+    .price-amount { font-size: 1.5rem; }
+}

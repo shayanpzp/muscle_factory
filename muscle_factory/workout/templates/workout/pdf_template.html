@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<title>مشخصات برنامه ورزشی</title>
+
+<style>
+    body {
+        direction: rtl;
+        font-family: sans-serif;
+        padding: 35px;
+        line-height: 1.9;
+        color: #000;
+        font-size: 15px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .section {
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .label {
+        font-weight: bold;
+        display: inline-block;
+        min-width: 140px;
+    }
+
+    ul {
+        margin: 0;
+        padding-right: 20px;
+    }
+</style>
+</head>
+
+<body>
+
+<h2>مشخصات کاربر و برنامه ورزشی</h2>
+
+<!-- اطلاعات شخصی -->
+<div class="section">
+    <p><span class="label">نام:</span> {{ user.first_name }} {{ user.last_name }}</p>
+    <p><span class="label">شماره موبایل:</span> {{ user.mobile }}</p>
+    <p><span class="label">BMI:</span> {{ bmi_info.bmi }} ({{ bmi_info.status }})</p>
+</div>
+
+<!-- فعالیت و بیماری‌ها -->
+<div class="section">
+    <p><span class="label">میزان فعالیت:</span> {{ activity }}</p>
+
+    <p><span class="label">بیماری‌ها:</span>
+        {% if diseases %}
+            <ul>
+                {% for d in diseases %}
+                    <li>{{ d }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            ندارد
+        {% endif %}
+    </p>
+</div>
+
+<!-- اطلاعات برنامه -->
+<div class="section">
+    <p><span class="label">نوع ورزش:</span> {{ workout }}</p>
+    <p><span class="label">برنامه مقدماتی:</span> {{ price_beginner }} تومان</p>
+    <p><span class="label">برنامه حرفه‌ای:</span> {{ price_pro }} تومان</p>
+</div>
+
+</body>
+</html>
